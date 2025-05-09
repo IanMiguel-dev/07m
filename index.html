@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7 Meses de Amor 💖</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(#ffc0cb, #fff);
+      color: #ff69b4;
+      overflow-x: hidden;
+    }
+    header {
+      text-align: center;
+      padding: 2rem;
+      background-color: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: #ff69b4;
+    }
+    .hearts {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+      animation: floatHearts 10s linear infinite;
+    }
+    @keyframes floatHearts {
+      0% {transform: translateY(0); opacity: 1;}
+      100% {transform: translateY(-100vh); opacity: 0;}
+    }
+    .timeline {
+      padding: 2rem;
+    }
+    .month {
+      margin: 1rem 0;
+      background: #fff0f5;
+      padding: 1rem;
+      border-left: 5px solid #ff69b4;
+      border-radius: 10px;
+    }
+    .card {
+      background: #fffafc;
+      padding: 2rem;
+      margin: 2rem;
+      border: 2px dashed #ff69b4;
+      border-radius: 15px;
+      animation: fadeIn 2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      0% {opacity: 0; transform: translateY(20px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+    .countdown {
+      text-align: center;
+      font-size: 1.5rem;
+      padding: 2rem;
+      color: #d63384;
+    }
+  </style>
+</head>
+<body>
+  <div class="hearts">❤️ 💖 💕 💗 💓 💘 💝 💞 💟</div>
+
+  <header>
+    <h1>Feliz 7 Meses, meu amor 💖</h1>
+    <p>Uma pequena surpresa feita com muito carinho 🌸</p>
+  </header>
+
+  <section class="timeline">
+    <div class="month"><strong>31/08/2024:</strong> Nos conhecemos 💫</div>
+    <div class="month"><strong>08/10/2024:</strong> Minha declaração 💌</div>
+    <div class="month"><strong>10/10/2024:</strong> Oficialmente juntos 💖</div>
+    <div class="month"><strong>10/11/2024:</strong> 1 mês juntos 🎉</div>
+    <div class="month"><strong>10/12/2024:</strong> 2 meses juntos 🎊</div>
+    <div class="month"><strong>31/12/2024:</strong> Nosso primeiro Réveillon ✨</div>
+    <div class="month"><strong>10/01/2025:</strong> 3 meses juntos 💝</div>
+    <div class="month"><strong>10/02/2025:</strong> 4 meses juntos 💘</div>
+    <div class="month"><strong>14/02/2025:</strong> Valentine's Day 💐</div>
+    <div class="month"><strong>10/03/2025:</strong> 5 meses juntos 💞</div>
+    <div class="month"><strong>10/04/2025:</strong> 6 meses juntos 💗</div>
+    <div class="month"><strong>10/05/2025:</strong> 7 meses juntos 💓</div>
+  </section>
+
+  <section class="card">
+    <h2>Minha mensagem pra você </h2>
+    <p>Meu amor, cada mês ao seu lado é um presente. Sou grato todos os dias por ter você na minha vida. Grato pelo seu apoio, pela sua presença, e por tudo o que você representa pra mim. Ao seu lado, eu não preciso buscar aprovação de ninguém, pois o seu brilho, quando está comigo, ofusca tudo ao redor. Nada neste universo se compara à luz que você traz.
+
+Eu te amo profundamente, e quero ser o homem que estará ao seu lado em cada passo, te apoiando, te aplaudindo, te amando enquanto você cresce e conquista tudo o que deseja. Quero te mostrar, todos os dias, o quão preciosa você é, e o quanto sua existência é incrivelmente única.
+
+Digo mais uma vez, com todo o meu coração: eu te amo infinitamente. Que venham muitos e muitos meses juntos! 💕</p>
+  </section>
+
+  <section class="countdown">
+    <h2>Faltam <span id="dias"></span> dias para nosso próximo mêsversário!</h2>
+  </section>
+
+  <script>
+    function calcularProximoMesversario() {
+  const hoje = new Date();
+  let proximo = new Date(hoje.getFullYear(), hoje.getMonth(), 10);
+
+  if (hoje.getDate() >= 10) {
+    // Se já passou do dia 10 deste mês, contar para o próximo mês
+    proximo.setMonth(proximo.getMonth() + 1);
+  }
+
+  const diferenca = proximo - hoje;
+  const dias = Math.ceil(diferenca / (1000 * 60 * 60 * 24));
+  document.getElementById("dias").innerText = dias;
+}
+
+calcularProximoMesversario();
+
+  </script>
+</body>
+</html>
