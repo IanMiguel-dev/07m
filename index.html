@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>7 Meses de Amor 💖</title>
-  <style>
+ <style>
     body {
       margin: 0;
       font-family: 'Comic Sans MS', cursive, sans-serif;
@@ -64,6 +64,78 @@
       padding: 2rem;
       color: #d63384;
     }
+
+    .timeline-container {
+      padding: 2rem 1rem;
+      position: relative;
+    }
+
+    .timeline-vertical {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .timeline-vertical::after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      background-color: #ff69b4;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -2px;
+    }
+
+    .event {
+      padding: 1rem;
+      position: relative;
+      width: 50%;
+      box-sizing: border-box;
+    }
+
+    .event .content {
+      background: #fff0f5;
+      padding: 1rem;
+      border-radius: 15px;
+      border: 2px solid #ff69b4;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .event.left {
+      left: 0;
+      text-align: right;
+    }
+
+    .event.right {
+      left: 50%;
+      text-align: left;
+    }
+
+    .event::before {
+      content: "💖";
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      top: 15px;
+      background-color: #fff;
+      border: 2px solid #ff69b4;
+      border-radius: 50%;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+
+    .event.left::before {
+      right: -15px;
+    }
+
+    .event.right::before {
+      left: -15px;
+    }
   </style>
 </head>
 <body>
@@ -74,20 +146,47 @@
     <p>Uma pequena surpresa feita com muito carinho 🌸</p>
   </header>
 
-  <section class="timeline">
-    <div class="month"><strong>31/08/2024:</strong> Nos conhecemos 💫</div>
-    <div class="month"><strong>08/10/2024:</strong> Minha declaração 💌</div>
-    <div class="month"><strong>10/10/2024:</strong> Oficialmente juntos 💖</div>
-    <div class="month"><strong>10/11/2024:</strong> 1 mês juntos 🎉</div>
-    <div class="month"><strong>10/12/2024:</strong> 2 meses juntos 🎊</div>
-    <div class="month"><strong>31/12/2024:</strong> Nosso primeiro Réveillon ✨</div>
-    <div class="month"><strong>10/01/2025:</strong> 3 meses juntos 💝</div>
-    <div class="month"><strong>10/02/2025:</strong> 4 meses juntos 💘</div>
-    <div class="month"><strong>14/02/2025:</strong> Valentine's Day 💐</div>
-    <div class="month"><strong>10/03/2025:</strong> 5 meses juntos 💞</div>
-    <div class="month"><strong>10/04/2025:</strong> 6 meses juntos 💗</div>
-    <div class="month"><strong>10/05/2025:</strong> 7 meses juntos 💓</div>
-  </section>
+ <section class="timeline-container">
+  <h2 style="text-align:center;">🌸 Nossa História 🌸</h2>
+  <div class="timeline-vertical">
+    <div class="event left">
+      <div class="content">31/08/2024 - Nos conhecemos 💫</div>
+    </div>
+    <div class="event right">
+      <div class="content">08/10/2024 - Minha declaração 💌</div>
+    </div>
+    <div class="event left">
+      <div class="content">10/10/2024 - Oficialmente juntos 💖</div>
+    </div>
+    <div class="event right">
+      <div class="content">10/11/2024 - 1 mês juntos 🎉</div>
+    </div>
+    <div class="event left">
+      <div class="content">10/12/2024 - 2 meses juntos 🎊</div>
+    </div>
+    <div class="event right">
+      <div class="content">31/12/2024 - Primeiro Réveillon ✨</div>
+    </div>
+    <div class="event left">
+      <div class="content">10/01/2025 - 3 meses 💝</div>
+    </div>
+    <div class="event right">
+      <div class="content">10/02/2025 - 4 meses 💘</div>
+    </div>
+    <div class="event left">
+      <div class="content">14/02/2025 - Valentine's Day 💐</div>
+    </div>
+    <div class="event right">
+      <div class="content">10/03/2025 - 5 meses 💞</div>
+    </div>
+    <div class="event left">
+      <div class="content">10/04/2025 - 6 meses 💗</div>
+    </div>
+    <div class="event right">
+      <div class="content">10/05/2025 - 7 meses 💓</div>
+    </div>
+  </div>
+</section>
 
   <section class="card">
     <h2>Minha mensagem pra você </h2>
